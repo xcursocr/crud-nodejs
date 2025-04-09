@@ -1,13 +1,12 @@
 import express from "express";
 import "dotenv/config";
+import mainRouter from "./src/routes/main.router.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
-});
+app.use("/", mainRouter);
 
 app.listen(port, () => {
-  console.log(`Server runing in the port: ${port}`);
+  console.log(`http://localhost:${port}`);
 });
