@@ -1,7 +1,9 @@
 import data from "../../data.js";
 
 const Home = (req, res) => {
-  res.send("Hello world !!!");
+  res.render("home", {
+    title: "Home Page",
+  });
 };
 
 const getProducts = (req, res) => {
